@@ -1,10 +1,23 @@
-<a href="https://wattpad.com" target="_blank" rel="noopener noreferrer" class="unique-wattpad-btn">
-  <span class="emoji">📖</span>
-  <span class="text">Read on Wattpad</span>
-</a>
+<!-- Centering Wrapper Container -->
+<div class="btn-container">
+  <a href="https://wattpad.com" target="_blank" rel="noopener noreferrer" class="unique-wattpad-btn">
+    <span class="emoji">📖</span>
+    <span class="text">Read on Wattpad</span>
+  </a>
+</div>
 
 <style>
   @import url('https://googleapis.com');
+
+  /* Centering logic for the entire screen */
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Takes up the full height of the viewport */
+    width: 100%;
+    box-sizing: border-box;
+  }
 
   .unique-wattpad-btn {
     display: inline-flex;
@@ -17,15 +30,15 @@
     background: linear-gradient(135deg, #FF4500 0%, #FF8C00 100%);
     color: #FFFFFF;
     text-decoration: none;
-    border-radius: 50px; /* Pillow-soft capsule shape */
+    border-radius: 50px;
     
-    /* Huge Typography using a premium literary font */
+    /* Huge Typography */
     font-family: 'Cinzel', Georgia, serif;
     font-size: 40px; 
     letter-spacing: 1px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     
-    /* Box shadows for a 3D depth effect */
+    /* Box shadows for depth */
     box-shadow: 0 10px 30px rgba(255, 69, 0, 0.4), 
                 inset 0 2px 4px rgba(255, 255, 255, 0.3);
     
@@ -33,12 +46,11 @@
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
-  /* Animating the emoji separately to make it bounce on hover */
   .unique-wattpad-btn .emoji {
     transition: transform 0.3s ease;
   }
 
-  /* Hover Effects: Glow expands, button lifts up, emoji bounces */
+  /* Hover Effects */
   .unique-wattpad-btn:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(255, 69, 0, 0.6), 
